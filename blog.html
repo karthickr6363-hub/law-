@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Justice Legal Firm</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/blog-filter.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><i class="bi bi-scale"></i> Justice Legal</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index2.html">Home 2</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="admin-dashboard.html">Admin</a></li>
+                        <li class="nav-item ms-2">
+                            <a href="login.html" class="btn btn-outline-primary">Login</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <a href="register.html" class="btn btn-primary">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-section" style="padding: 100px 0 60px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>Legal News & Insights</h1>
+                    <p>Stay informed with our latest legal articles and updates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12 col-md-8 mb-3 mb-md-0">
+                    <input type="text" id="blog-search" class="form-control" placeholder="Search articles...">
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="blog-filter-container">
+                        <a href="#" class="blog-filter active" data-category="all">All</a>
+                        <a href="#" class="blog-filter" data-category="criminal">Criminal</a>
+                        <a href="#" class="blog-filter" data-category="family">Family</a>
+                        <a href="#" class="blog-filter" data-category="corporate">Corporate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row equal-height">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="blog-card" data-category="family">
+                        <img src="https://images.pexels.com/photos/4098219/pexels-photo-4098219.jpeg" alt="Understanding Your Rights in a Divorce" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta"><i class="bi bi-calendar"></i> Dec 5, 2024 | <i class="bi bi-person"></i> Admin</div>
+                            <h4>Understanding Your Rights in a Divorce</h4>
+                            <p>Learn about your legal rights and what to expect during divorce proceedings. This comprehensive guide covers property division, child custody, and alimony.</p>
+                            <div class="text-center">
+                                <a href="blog-details.html?id=1" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="blog-card" data-category="corporate">
+                        <img src="https://images.pexels.com/photos/5669619/pexels-photo-5669619.jpeg" alt="Corporate Law Updates 2024" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta"><i class="bi bi-calendar"></i> Dec 3, 2024 | <i class="bi bi-person"></i> Admin</div>
+                            <h4>Corporate Law Updates 2024</h4>
+                            <p>Important changes in corporate law that may affect your business this year. Stay updated with new regulations and compliance requirements.</p>
+                            <div class="text-center">
+                                <a href="blog-details.html?id=2" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="blog-card" data-category="criminal">
+                        <img src="https://images.pexels.com/photos/7714895/pexels-photo-7714895.jpeg" alt="Criminal Defense: Know Your Rights" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta"><i class="bi bi-calendar"></i> Dec 1, 2024 | <i class="bi bi-person"></i> Admin</div>
+                            <h4>Criminal Defense: Know Your Rights</h4>
+                            <p>Understanding your rights when facing criminal charges and how to protect yourself. Essential information for anyone dealing with the criminal justice system.</p>
+                            <div class="text-center">
+                                <a href="blog-details.html?id=3" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="blog-card" data-category="immigration">
+                        <img src="https://images.pexels.com/photos/12004745/pexels-photo-12004745.jpeg" alt="New Immigration Policies Explained" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta"><i class="bi bi-calendar"></i> Nov 28, 2024 | <i class="bi bi-person"></i> Admin</div>
+                            <h4>New Immigration Policies Explained</h4>
+                            <p>Recent changes in immigration policies and how they affect visa applications, green cards, and citizenship processes.</p>
+                            <div class="text-center">
+                                <a href="blog-details.html?id=4" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="blog-card" data-category="family">
+                        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=250&fit=crop" alt="Child Custody: What Parents Need to Know" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta"><i class="bi bi-calendar"></i> Nov 25, 2024 | <i class="bi bi-person"></i> Admin</div>
+                            <h4>Child Custody: What Parents Need to Know</h4>
+                            <p>A guide to understanding child custody laws, types of custody, and factors courts consider when making custody decisions.</p>
+                            <div class="text-center">
+                                <a href="blog-details.html?id=5" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="blog-card" data-category="corporate">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" alt="Starting a Business: Legal Checklist" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta"><i class="bi bi-calendar"></i> Nov 22, 2024 | <i class="bi bi-person"></i> Admin</div>
+                            <h4>Starting a Business: Legal Checklist</h4>
+                            <p>Essential legal steps when starting a new business, including entity formation, licenses, contracts, and compliance requirements.</p>
+                            <div class="text-center">
+                                <a href="blog-details.html?id=6" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <nav>
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 footer-section">
+                    <h5>Justice Legal</h5>
+                    <p>Your trusted partner for all legal matters.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 footer-section">
+                    <h5>Quick Links</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="attorneys.html">Attorneys</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3 footer-section">
+                    <h5>Practice Areas</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="service-details.html?service=criminal">Criminal Law</a></li>
+                        <li><a href="service-details.html?service=family">Family Law</a></li>
+                        <li><a href="service-details.html?service=corporate">Corporate Law</a></li>
+                        <li><a href="service-details.html?service=real-estate">Real Estate</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3 footer-section">
+                    <h5>Contact Info</h5>
+                    <p><i class="bi bi-geo-alt"></i> 123 Legal Street, Law District</p>
+                    <p><i class="bi bi-telephone"></i> +1 (555) 123-4567</p>
+                    <p><i class="bi bi-envelope"></i> info@justicelegal.com</p>
+                    <p><i class="bi bi-clock"></i> Mon-Fri: 9AM-6PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Justice Legal Firm. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

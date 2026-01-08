@@ -1,0 +1,100 @@
+/* ============================================
+   BLOG FILTER CONTAINER - SEPARATE CSS
+   ============================================ */
+
+.blog-filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.blog-filter {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--white);
+    color: var(--text-dark);
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    text-align: center;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    min-width: fit-content;
+    cursor: pointer;
+}
+
+.blog-filter:hover {
+    background: var(--bg-light);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.blog-filter.active {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.blog-filter.active:hover {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--white);
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 575.98px) {
+    .blog-filter-container {
+        gap: 8px;
+        justify-content: center;
+    }
+    
+    .blog-filter {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        flex: 1 1 calc(50% - 4px);
+        max-width: calc(50% - 4px);
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .blog-filter-container {
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .blog-filter {
+        flex: 1 1 calc(50% - 5px);
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+/* Desktop adjustments */
+@media (min-width: 992px) {
+    .blog-filter-container {
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .blog-filter {
+        flex: 0 0 auto;
+        margin: 0;
+    }
+}
+
