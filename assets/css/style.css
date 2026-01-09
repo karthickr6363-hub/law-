@@ -1094,10 +1094,145 @@ p {
     border-left-color: var(--secondary-color);
 }
 
+/* Mobile/Tablet Dashboard Sidebar */
+@media (max-width: 991.98px) {
+    .dashboard-sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 280px;
+        max-width: 85%;
+        height: 100vh;
+        z-index: 1050;
+        transition: left 0.3s ease;
+        box-shadow: var(--shadow-xl);
+        overflow-y: auto;
+    }
+    
+    .dashboard-sidebar.show {
+        left: 0;
+    }
+    
+    .dashboard-content {
+        padding: 20px 15px;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    
+    .dashboard-content .d-flex.justify-content-between {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .dashboard-content h2 {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .dashboard-content h4 {
+        text-align: center;
+        width: 100%;
+    }
+    
+    /* Center section headers */
+    .dashboard-content .admin-table h4,
+    .dashboard-content .recent-activity h4 {
+        text-align: center;
+    }
+    
+    /* Sidebar overlay */
+    .dashboard-sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1049;
+    }
+    
+    .dashboard-sidebar-overlay.show {
+        display: block;
+    }
+    
+    /* Center dashboard stats and cards on mobile */
+    .dashboard-stats {
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-box {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .quick-actions {
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+    
+    .quick-action-card {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .admin-table {
+        width: 100%;
+        overflow-x: auto;
+        margin: 0 auto;
+    }
+    
+    .recent-activity {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    /* Center all content within dashboard */
+    .dashboard-content .row {
+        justify-content: center;
+    }
+    
+    .dashboard-content .col-lg-8,
+    .dashboard-content .col-lg-6,
+    .dashboard-content .col-lg-4,
+    .dashboard-content .col-md-6,
+    .dashboard-content .col-md-4 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Center buttons and action items */
+    .dashboard-content .btn {
+        display: block;
+        margin: 10px auto;
+    }
+    
+    .dashboard-content .d-flex .btn {
+        display: inline-block;
+        margin: 5px;
+    }
+    
+    /* Center table responsive wrapper */
+    .table-responsive {
+        margin: 0 auto;
+    }
+}
+
 .dashboard-content {
     padding: 30px;
     background: var(--bg-light);
     min-height: 100vh;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .stat-card {
