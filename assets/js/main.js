@@ -38,7 +38,7 @@
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             // Don't close if it's a dropdown toggle or if clicking inside dropdown
-            if (window.innerWidth < 992 && !this.classList.contains('dropdown-toggle') && !this.closest('.dropdown-menu')) {
+            if (window.innerWidth < 1200 && !this.classList.contains('dropdown-toggle') && !this.closest('.dropdown-menu')) {
                 navbarToggler.click();
             }
         });
@@ -49,7 +49,7 @@
     dropdownItems.forEach(item => {
         item.addEventListener('click', function() {
             // Close mobile menu after selecting dropdown item
-            if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
+            if (window.innerWidth < 1200 && navbarCollapse.classList.contains('show')) {
                 setTimeout(() => {
                     navbarToggler.click();
                 }, 100);
@@ -61,8 +61,8 @@
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     dropdownToggles.forEach(toggle => {
         toggle.addEventListener('click', function(e) {
-            // On mobile, prevent the navbar from closing when opening dropdown
-            if (window.innerWidth < 992) {
+            // On mobile/tablet (up to 1024px), prevent the navbar from closing when opening dropdown
+            if (window.innerWidth < 1200) {
                 e.stopPropagation();
             }
         });
@@ -112,30 +112,48 @@
     // ACCORDION / FAQ
     // ============================================
     
-    const accordionHeaders = document.querySelectorAll('.accordion-header button');
-    accordionHeaders.forEach(header => {
-        header.addEventListener('click', function() {
-            const isActive = this.classList.contains('active');
-            const content = this.nextElementSibling;
-            
-            // Close all other accordions
-            accordionHeaders.forEach(otherHeader => {
-                if (otherHeader !== this) {
-                    otherHeader.classList.remove('active');
-                    otherHeader.nextElementSibling.classList.remove('active');
+    // Initialize accordion functionality
+    const initAccordion = () => {
+        const accordionHeaders = document.querySelectorAll('.accordion-header button');
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const isActive = this.classList.contains('active');
+                const accordionItem = this.closest('.accordion-item');
+                const content = accordionItem ? accordionItem.querySelector('.accordion-content') : null;
+                
+                if (!content) return;
+                
+                // Close all other accordions
+                document.querySelectorAll('.accordion-item').forEach(item => {
+                    if (item !== accordionItem) {
+                        const otherButton = item.querySelector('.accordion-header button');
+                        const otherContent = item.querySelector('.accordion-content');
+                        if (otherButton) otherButton.classList.remove('active');
+                        if (otherContent) otherContent.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current accordion
+                if (isActive) {
+                    this.classList.remove('active');
+                    content.classList.remove('active');
+                } else {
+                    this.classList.add('active');
+                    content.classList.add('active');
                 }
             });
-            
-            // Toggle current accordion
-            if (isActive) {
-                this.classList.remove('active');
-                content.classList.remove('active');
-            } else {
-                this.classList.add('active');
-                content.classList.add('active');
-            }
         });
-    });
+    };
+    
+    // Initialize on DOM ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAccordion);
+    } else {
+        initAccordion();
+    }
 
     // ============================================
     // FORM VALIDATION

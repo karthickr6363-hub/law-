@@ -153,14 +153,25 @@ p {
 .navbar-toggler {
     border: none;
     padding: 0.25rem 0.5rem;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius-md);
+    transition: var(--transition);
+}
+
+.navbar-toggler:hover {
+    border-color: var(--secondary-color);
+    background-color: rgba(182, 141, 64, 0.1);
 }
 
 .navbar-toggler:focus {
-    box-shadow: none;
+    box-shadow: 0 0 0 3px rgba(182, 141, 64, 0.25);
+    outline: none;
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2815, 23, 42, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.5em;
+    height: 1.5em;
 }
 
 .navbar.sticky-top {
@@ -224,8 +235,13 @@ p {
     border-color: var(--border-color);
 }
 
-/* Mobile and Tablet Dropdown Fixes */
-@media (max-width: 991.98px) {
+/* Mobile and Tablet Dropdown Fixes - Hamburger menu up to 1024px */
+@media (max-width: 1199.98px) {
+    /* Ensure hamburger button is visible */
+    .navbar-toggler {
+        display: block !important;
+    }
+    
     /* Fix layout shift: Position navbar collapse absolutely when open */
     .navbar .container {
         position: relative;
@@ -1231,8 +1247,21 @@ p {
     background: var(--bg-light);
     min-height: 100vh;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 100%;
     width: 100%;
+}
+
+/* Center dashboard content when sidebar is present */
+.row > .col-lg-9 {
+    display: block;
+}
+
+.row > .col-lg-9 > .dashboard-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    width: 100%;
+    display: block;
 }
 
 .stat-card {
@@ -1393,8 +1422,8 @@ p {
     }
 }
 
-/* Tablet (576px - 991px) */
-@media (min-width: 576px) and (max-width: 991.98px) {
+/* Tablet (576px - 1199px) - Includes 1024px for hamburger menu */
+@media (min-width: 576px) and (max-width: 1199.98px) {
     .hero-section h1 {
         font-size: 2.5rem;
     }
@@ -1452,8 +1481,8 @@ p {
     }
 }
 
-/* Desktop (992px+) */
-@media (min-width: 992px) {
+/* Desktop (1200px+) - Full menu expands here */
+@media (min-width: 1200px) {
     .hero-section h1 {
         font-size: 3.5rem;
     }
