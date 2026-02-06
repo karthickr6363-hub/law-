@@ -195,7 +195,7 @@
     <div class="admin-header">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <h4 class="mb-0">
                         <a href="index.html" style="color: var(--accent-color); text-decoration: none;">
                             <i class="bi bi-scale"></i> Justice Legal
@@ -205,18 +205,6 @@
                         </span>
                     </h4>
                 </div>
-                <div class="col-md-6 text-end">
-                    <div class="user-info d-inline-flex">
-                        <div class="user-avatar">A</div>
-                        <div>
-                            <div style="font-weight: 600;">Admin User</div>
-                            <small style="opacity: 0.8;">Administrator</small>
-                        </div>
-                        <a href="index.html" class="btn btn-sm btn-outline-light ms-3">
-                            <i class="bi bi-box-arrow-right"></i> Logout
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -224,7 +212,7 @@
     <!-- Sidebar Overlay (Mobile/Tablet) -->
     <div class="dashboard-sidebar-overlay" id="dashboardSidebarOverlay"></div>
     
-    <section class="section-padding" style="padding-top: 20px;">
+    <section class="section-padding" style="padding-top: 0px;">
         <div class="container-fluid">
             <div class="row">
                 <!-- Sidebar Toggle Button (Mobile/Tablet) -->
@@ -255,6 +243,20 @@
                         <li><a href="#reports"><i class="bi bi-graph-up"></i> Reports</a></li>
                         <li><a href="#settings"><i class="bi bi-gear"></i> Settings</a></li>
                     </ul>
+                    
+                    <!-- User Info Section -->
+                    <div class="sidebar-user-info" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 10px; border-top: 1px solid rgba(182, 141, 64, 0.2);">
+                        <div class="user-info d-flex align-items-center mb-3">
+                            <div class="user-avatar" style="width: 40px; height: 40px; border-radius: 50%; background: var(--secondary-color); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 12px;">A</div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--accent-color);">Admin User</div>
+                                <small style="opacity: 0.8; color: rgba(248, 250, 252, 0.8);">Administrator</small>
+                            </div>
+                        </div>
+                        <a href="index.html" class="btn btn-outline-light btn-sm w-100">
+                            <i class="bi bi-box-arrow-right"></i> Logout
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Main Content -->
@@ -548,7 +550,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2025 Justice Legal Firm. All rights reserved.</p>
+                <p>&copy; 2026 Justice Legal Firm. All rights reserved.</p>
             </div>
         </div>
     </footer>
